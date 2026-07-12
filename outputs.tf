@@ -1,3 +1,7 @@
+output "arc_private_link_scopes_id" {
+  description = "Map of id values across all arc_private_link_scopes, keyed the same as var.arc_private_link_scopes"
+  value       = { for k, v in azurerm_arc_private_link_scope.arc_private_link_scopes : k => v.id }
+}
 output "arc_private_link_scopes_location" {
   description = "Map of location values across all arc_private_link_scopes, keyed the same as var.arc_private_link_scopes"
   value       = { for k, v in azurerm_arc_private_link_scope.arc_private_link_scopes : k => v.location }
