@@ -14,7 +14,7 @@ EOT
     location                      = string
     name                          = string
     resource_group_name           = string
-    public_network_access_enabled = optional(bool) # Default: false
+    public_network_access_enabled = optional(bool)
     tags                          = optional(map(string))
   }))
 }
